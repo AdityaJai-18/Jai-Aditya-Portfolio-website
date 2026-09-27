@@ -7,8 +7,8 @@
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Font Awesome CDN for tech & UI icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Google Fonts: Inter & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,7 +51,6 @@
   </script>
 
   <style>
-    /* Custom Scrollbar */
     ::-webkit-scrollbar {
       width: 8px;
     }
@@ -66,7 +65,6 @@
       background: #4f46e5;
     }
 
-    /* Ambient Background Grid */
     .bg-grid-pattern {
       background-size: 40px 40px;
       background-image: 
@@ -74,7 +72,6 @@
         linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
     }
 
-    /* Radial spotlight */
     .radial-spotlight {
       background: radial-gradient(circle 600px at 50% 10%, rgba(99, 102, 241, 0.15), transparent 75%);
     }
@@ -99,11 +96,12 @@
   <div class="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[650px] radial-spotlight pointer-events-none z-0"></div>
   <div class="fixed -bottom-48 -right-48 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none z-0"></div>
 
-  <header class="sticky top-0 z-50 transition-all duration-300 backdrop-blur-md bg-dark-900/80 border-b border-white/5">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-dark-900/80 border-b border-white/5">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16 sm:h-20">
         
-        <!-- Logo / Brand -->
+        <!-- Logo -->
         <a href="#hero" class="flex items-center gap-3 group">
           <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 via-indigo-500 to-cyan-400 p-[1.5px] transition-transform duration-300 group-hover:scale-105">
             <div class="w-full h-full bg-dark-900 rounded-[10px] flex items-center justify-center font-mono font-bold text-white text-base">
@@ -116,7 +114,7 @@
           </div>
         </a>
 
-        <!-- Desktop Navigation Links -->
+        <!-- Desktop Nav -->
         <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
           <a href="#about" class="hover:text-brand-400 transition-colors">About</a>
           <a href="#skills" class="hover:text-brand-400 transition-colors">Skills</a>
@@ -153,16 +151,15 @@
 
   <main class="relative z-10">
 
+    <!-- Hero Section -->
     <section id="hero" class="relative pt-20 pb-24 md:pt-32 md:pb-36 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col items-center text-center max-w-4xl mx-auto">
         
-        <!-- Availability Badge -->
         <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-400 text-xs font-mono mb-8 backdrop-blur-sm shadow-sm animate-pulse">
           <span class="w-2 h-2 rounded-full bg-emerald-400 ring-4 ring-emerald-500/20"></span>
           Available for Engineering Opportunities
         </div>
 
-        <!-- Main Headline -->
         <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6">
           Architecting Scalable <br class="hidden sm:inline">
           <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 via-indigo-300 to-cyan-400">
@@ -170,12 +167,10 @@
           </span>
         </h1>
 
-        <!-- Subtitle / Bio -->
-        <p class="text-base sm:text-xl text-slate-300/90 leading-relaxed font-normal max-w-2xl mb-10">
+        <p class="text-base sm:text-xl text-slate-300 leading-relaxed font-normal max-w-2xl mb-10">
           Hi, I'm <strong class="text-white font-semibold">Jai Aditya J S Jayaraman</strong>. A Software Engineer with a B.Tech in Artificial Intelligence & Data Science, specialized in production-grade REST APIs, Retrieval-Augmented Generation (RAG) architectures, and enterprise business flows.
         </p>
 
-        <!-- CTA Buttons -->
         <div class="flex flex-wrap items-center justify-center gap-4 w-full sm:w-auto">
           <a href="#projects" class="w-full sm:w-auto px-7 py-3.5 rounded-xl font-medium text-sm text-white bg-gradient-to-r from-brand-600 via-indigo-600 to-cyan-600 hover:shadow-glow hover:opacity-95 transition-all flex items-center justify-center gap-2">
             <span>Explore Projects</span>
@@ -193,7 +188,6 @@
           </button>
         </div>
 
-        <!-- Social Proof Stats Bar -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 mt-16 pt-12 border-t border-white/5 w-full">
           <div class="p-4 rounded-xl glass-card text-center">
             <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">8.17</div>
@@ -215,6 +209,7 @@
       </div>
     </section>
 
+    <!-- About Section -->
     <section id="about" class="py-20 border-t border-white/5 relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -226,8 +221,7 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
-          <!-- Personal Bio Card (Left) -->
-          <div class="lg:col-span-7 glass-card p-6 sm:p-8 rounded-2xl relative overflow-hidden space-y-5">
+          <div class="lg:col-span-7 glass-card p-6 sm:p-8 rounded-2xl space-y-5">
             <div class="flex items-center gap-3">
               <span class="p-2.5 rounded-lg bg-brand-500/10 text-brand-400 text-lg">
                 <i class="fa-solid fa-user-astronaut"></i>
@@ -236,7 +230,7 @@
             </div>
             
             <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
-              I am a Software Engineer based in <span class="text-white font-medium">Chennai, India</span>, equipped with an in-depth foundation in Artificial Intelligence, Machine Learning, and robust Backend Web Engineering. 
+              I am a Software Engineer based in <span class="text-white font-medium">Chennai, India</span>, equipped with an in-depth foundation in Artificial Intelligence, Machine Learning, and robust Backend Web Engineering.
             </p>
             
             <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
@@ -263,10 +257,8 @@
             </div>
           </div>
 
-          <!-- Academic Journey Cards (Right) -->
           <div class="lg:col-span-5 space-y-4">
             
-            <!-- Degree -->
             <div class="glass-card p-6 rounded-2xl relative border-l-4 border-l-brand-500">
               <div class="flex justify-between items-start mb-2">
                 <span class="text-xs font-mono px-2 py-0.5 rounded bg-brand-500/10 text-brand-400">2021 – 2025</span>
@@ -279,7 +271,6 @@
               </p>
             </div>
 
-            <!-- Schooling -->
             <div class="glass-card p-6 rounded-2xl relative border-l-4 border-l-cyan-500">
               <div class="flex justify-between items-start mb-2">
                 <span class="text-xs font-mono px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-400">Higher Secondary (HSC)</span>
@@ -288,7 +279,7 @@
               <h4 class="text-base font-bold text-white">D.A.V. Matriculation Higher Secondary School</h4>
               <p class="text-sm text-slate-400 mt-1">Chennai, Tamil Nadu</p>
               <p class="text-xs text-slate-400 mt-3 leading-relaxed">
-                Grounded in high mathematical rigor, analytical reasoning, and early foundational computing principles.
+                Grounded in high mathematical rigor, analytical reasoning, and foundational computing principles.
               </p>
             </div>
 
@@ -299,34 +290,35 @@
       </div>
     </section>
 
+    <!-- Skills Section -->
     <section id="skills" class="py-20 border-t border-white/5 relative bg-dark-850/40">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="flex flex-col items-center mb-12 text-center">
           <span class="text-xs font-mono font-semibold tracking-widest text-indigo-400 uppercase">Expertise & Tooling</span>
           <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Technical Proficiency</h2>
-          <p class="text-slate-400 text-sm max-w-xl mt-3">From programming fundamentals to state-of-the-art vector stores and enterprise ERP suites.</p>
+          <p class="text-slate-400 text-sm max-w-xl mt-3">From programming fundamentals to vector stores and enterprise ERP suites.</p>
           <div class="w-16 h-1 bg-gradient-to-r from-brand-500 to-indigo-400 rounded-full mt-4"></div>
         </div>
 
         <!-- Filter Tab Buttons -->
         <div class="flex flex-wrap items-center justify-center gap-2 mb-10">
-          <button onclick="filterSkills('all')" class="skill-tab active-tab px-4 py-2 rounded-xl text-xs font-mono transition-all glass-card hover:border-brand-500 text-white bg-brand-600/30 border-brand-500" data-category="all">
+          <button onclick="filterSkills('all', this)" class="skill-tab px-4 py-2 rounded-xl text-xs font-mono transition-all glass-card text-white bg-brand-600/30 border-brand-500">
             All (16)
           </button>
-          <button onclick="filterSkills('languages')" class="skill-tab px-4 py-2 rounded-xl text-xs font-mono transition-all glass-card hover:border-brand-500 text-slate-400" data-category="languages">
+          <button onclick="filterSkills('languages', this)" class="skill-tab px-4 py-2 rounded-xl text-xs font-mono transition-all glass-card text-slate-400">
             Languages
           </button>
-          <button onclick="filterSkills('backend')" class="skill-tab px-4 py-2 rounded-xl text-xs font-mono transition-all glass-card hover:border-brand-500 text-slate-400" data-category="backend">
+          <button onclick="filterSkills('backend', this)" class="skill-tab px-4 py-2 rounded-xl text-xs font-mono transition-all glass-card text-slate-400">
             Backend & Web
           </button>
-          <button onclick="filterSkills('ai')" class="skill-tab px-4 py-2 rounded-xl text-xs font-mono transition-all glass-card hover:border-brand-500 text-slate-400" data-category="ai">
+          <button onclick="filterSkills('ai', this)" class="skill-tab px-4 py-2 rounded-xl text-xs font-mono transition-all glass-card text-slate-400">
             AI, ML & RAG
           </button>
-          <button onclick="filterSkills('database')" class="skill-tab px-4 py-2 rounded-xl text-xs font-mono transition-all glass-card hover:border-brand-500 text-slate-400" data-category="database">
+          <button onclick="filterSkills('database', this)" class="skill-tab px-4 py-2 rounded-xl text-xs font-mono transition-all glass-card text-slate-400">
             Database & Cloud
           </button>
-          <button onclick="filterSkills('enterprise')" class="skill-tab px-4 py-2 rounded-xl text-xs font-mono transition-all glass-card hover:border-brand-500 text-slate-400" data-category="enterprise">
+          <button onclick="filterSkills('enterprise', this)" class="skill-tab px-4 py-2 rounded-xl text-xs font-mono transition-all glass-card text-slate-400">
             Tools & Enterprise
           </button>
         </div>
@@ -334,7 +326,6 @@
         <!-- Skills Grid -->
         <div id="skills-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
           
-          <!-- Python -->
           <div class="skill-card p-4 rounded-xl glass-card flex items-center gap-3 transition-transform hover:-translate-y-1" data-category="languages">
             <i class="fa-brands fa-python text-2xl text-yellow-400"></i>
             <div>
@@ -343,7 +334,6 @@
             </div>
           </div>
 
-          <!-- Java -->
           <div class="skill-card p-4 rounded-xl glass-card flex items-center gap-3 transition-transform hover:-translate-y-1" data-category="languages">
             <i class="fa-brands fa-java text-2xl text-orange-400"></i>
             <div>
@@ -352,7 +342,6 @@
             </div>
           </div>
 
-          <!-- SQL -->
           <div class="skill-card p-4 rounded-xl glass-card flex items-center gap-3 transition-transform hover:-translate-y-1" data-category="languages database">
             <i class="fa-solid fa-database text-2xl text-blue-400"></i>
             <div>
@@ -361,7 +350,6 @@
             </div>
           </div>
 
-          <!-- C / C++ -->
           <div class="skill-card p-4 rounded-xl glass-card flex items-center gap-3 transition-transform hover:-translate-y-1" data-category="languages">
             <i class="fa-solid fa-code text-2xl text-indigo-400"></i>
             <div>
@@ -370,7 +358,6 @@
             </div>
           </div>
 
-          <!-- Flask -->
           <div class="skill-card p-4 rounded-xl glass-card flex items-center gap-3 transition-transform hover:-translate-y-1" data-category="backend">
             <i class="fa-solid fa-pepper-hot text-2xl text-red-400"></i>
             <div>
@@ -379,7 +366,6 @@
             </div>
           </div>
 
-          <!-- Django -->
           <div class="skill-card p-4 rounded-xl glass-card flex items-center gap-3 transition-transform hover:-translate-y-1" data-category="backend">
             <i class="fa-solid fa-cubes text-2xl text-emerald-400"></i>
             <div>
@@ -388,7 +374,6 @@
             </div>
           </div>
 
-          <!-- Streamlit -->
           <div class="skill-card p-4 rounded-xl glass-card flex items-center gap-3 transition-transform hover:-translate-y-1" data-category="backend ai">
             <i class="fa-solid fa-chart-line text-2xl text-pink-400"></i>
             <div>
@@ -397,7 +382,6 @@
             </div>
           </div>
 
-          <!-- REST APIs -->
           <div class="skill-card p-4 rounded-xl glass-card flex items-center gap-3 transition-transform hover:-translate-y-1" data-category="backend enterprise">
             <i class="fa-solid fa-network-wired text-2xl text-cyan-400"></i>
             <div>
@@ -406,7 +390,6 @@
             </div>
           </div>
 
-          <!-- RAG & ChromaDB -->
           <div class="skill-card p-4 rounded-xl glass-card flex items-center gap-3 transition-transform hover:-translate-y-1" data-category="ai">
             <i class="fa-solid fa-brain text-2xl text-purple-400"></i>
             <div>
@@ -415,7 +398,6 @@
             </div>
           </div>
 
-          <!-- NLP & NLTK -->
           <div class="skill-card p-4 rounded-xl glass-card flex items-center gap-3 transition-transform hover:-translate-y-1" data-category="ai">
             <i class="fa-solid fa-language text-2xl text-sky-400"></i>
             <div>
@@ -424,7 +406,6 @@
             </div>
           </div>
 
-          <!-- Scikit-Learn & ML -->
           <div class="skill-card p-4 rounded-xl glass-card flex items-center gap-3 transition-transform hover:-translate-y-1" data-category="ai">
             <i class="fa-solid fa-diagram-project text-2xl text-orange-400"></i>
             <div>
@@ -433,7 +414,6 @@
             </div>
           </div>
 
-          <!-- Firebase -->
           <div class="skill-card p-4 rounded-xl glass-card flex items-center gap-3 transition-transform hover:-translate-y-1" data-category="database backend">
             <i class="fa-solid fa-fire text-2xl text-amber-500"></i>
             <div>
@@ -442,7 +422,6 @@
             </div>
           </div>
 
-          <!-- NodeMCU / IoT -->
           <div class="skill-card p-4 rounded-xl glass-card flex items-center gap-3 transition-transform hover:-translate-y-1" data-category="enterprise">
             <i class="fa-solid fa-microchip text-2xl text-teal-400"></i>
             <div>
@@ -451,7 +430,6 @@
             </div>
           </div>
 
-          <!-- Postman -->
           <div class="skill-card p-4 rounded-xl glass-card flex items-center gap-3 transition-transform hover:-translate-y-1" data-category="enterprise">
             <i class="fa-solid fa-paper-plane text-2xl text-orange-500"></i>
             <div>
@@ -460,7 +438,6 @@
             </div>
           </div>
 
-          <!-- Git & GitHub -->
           <div class="skill-card p-4 rounded-xl glass-card flex items-center gap-3 transition-transform hover:-translate-y-1" data-category="enterprise">
             <i class="fa-brands fa-git-alt text-2xl text-red-500"></i>
             <div>
@@ -469,7 +446,6 @@
             </div>
           </div>
 
-          <!-- SAP S/4HANA SD -->
           <div class="skill-card p-4 rounded-xl glass-card flex items-center gap-3 transition-transform hover:-translate-y-1" data-category="enterprise">
             <i class="fa-solid fa-building-columns text-2xl text-indigo-400"></i>
             <div>
@@ -483,6 +459,7 @@
       </div>
     </section>
 
+    <!-- Experience Section -->
     <section id="experience" class="py-20 border-t border-white/5 relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -494,12 +471,10 @@
 
         <div class="relative border-l border-white/10 ml-4 sm:ml-32 space-y-12">
           
-          <!-- Timeline Item 1: Andiran Healthtech -->
+          <!-- Experience 1 -->
           <div class="relative pl-8 sm:pl-12 group">
-            <!-- Node Pin -->
             <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-dark-900 border-2 border-brand-500 group-hover:scale-125 group-hover:bg-brand-500 transition-all shadow-glow"></div>
             
-            <!-- Date indicator for desktop -->
             <div class="sm:absolute sm:-left-36 top-1 text-xs font-mono text-slate-400 mb-2 sm:mb-0">
               Mar 2024 – Sep 2024
             </div>
@@ -529,7 +504,7 @@
             </div>
           </div>
 
-          <!-- Timeline Item 2: Enterprise Systems & Corporate Training Track -->
+          <!-- Experience 2 -->
           <div class="relative pl-8 sm:pl-12 group">
             <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-dark-900 border-2 border-indigo-500 group-hover:scale-125 group-hover:bg-indigo-500 transition-all shadow-glow"></div>
             
@@ -547,7 +522,7 @@
               </div>
 
               <p class="text-sm text-slate-300 leading-relaxed mt-4">
-                Completed rigorous enterprise preparation in SAP S/4HANA Sales & Distribution (SD), mastering enterprise resource planning and business logistics integration:
+                Completed enterprise preparation in SAP S/4HANA Sales & Distribution (SD), mastering enterprise resource planning and business logistics integration:
               </p>
 
               <ul class="space-y-2 text-sm text-slate-300 list-disc list-outside ml-4 mt-3 leading-relaxed">
@@ -570,6 +545,7 @@
       </div>
     </section>
 
+    <!-- Projects Section -->
     <section id="projects" class="py-20 border-t border-white/5 relative bg-dark-850/40">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -582,7 +558,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           
-          <!-- Project 1: PDF QA Engine (RAG) -->
+          <!-- Project 1 -->
           <div class="glass-card rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-brand-500/50 transition-all duration-300 group">
             <div>
               <div class="flex items-center justify-between gap-4 mb-4">
@@ -617,7 +593,7 @@
             </div>
           </div>
 
-          <!-- Project 2: Urban Drain Block Monitoring System (IoT) -->
+          <!-- Project 2 -->
           <div class="glass-card rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-cyan-500/50 transition-all duration-300 group">
             <div>
               <div class="flex items-center justify-between gap-4 mb-4">
@@ -652,7 +628,7 @@
             </div>
           </div>
 
-          <!-- Project 3: Customer Feedback Sentiment Intelligence -->
+          <!-- Project 3 -->
           <div class="glass-card rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-indigo-500/50 transition-all duration-300 group">
             <div>
               <div class="flex items-center justify-between gap-4 mb-4">
@@ -687,7 +663,7 @@
             </div>
           </div>
 
-          <!-- Project 4: Customer Segmentation Engine -->
+          <!-- Project 4 -->
           <div class="glass-card rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-emerald-500/50 transition-all duration-300 group">
             <div>
               <div class="flex items-center justify-between gap-4 mb-4">
@@ -727,6 +703,7 @@
       </div>
     </section>
 
+    <!-- Achievements Section -->
     <section id="achievements" class="py-20 border-t border-white/5 relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -738,7 +715,6 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           
-          <!-- Achievement 1 -->
           <div class="glass-card p-6 rounded-2xl relative overflow-hidden group hover:border-yellow-500/40 transition">
             <div class="w-12 h-12 rounded-xl bg-yellow-500/10 text-yellow-400 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
               <i class="fa-solid fa-trophy"></i>
@@ -750,7 +726,6 @@
             </p>
           </div>
 
-          <!-- Achievement 2 -->
           <div class="glass-card p-6 rounded-2xl relative overflow-hidden group hover:border-brand-500/40 transition">
             <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
               <i class="fa-solid fa-book-bookmark"></i>
@@ -762,7 +737,6 @@
             </p>
           </div>
 
-          <!-- Achievement 3 -->
           <div class="glass-card p-6 rounded-2xl relative overflow-hidden group hover:border-cyan-500/40 transition">
             <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
               <i class="fa-solid fa-certificate"></i>
@@ -779,6 +753,7 @@
       </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" class="py-20 border-t border-white/5 relative bg-dark-850/40">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -791,7 +766,6 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
-          <!-- Contact Info Cards (Left) -->
           <div class="lg:col-span-5 space-y-4">
             
             <div class="glass-card p-6 rounded-2xl">
@@ -814,7 +788,7 @@
                   </div>
                   <div>
                     <h4 class="text-sm font-semibold text-white">Direct Email</h4>
-                    <p class="text-xs font-mono text-slate-400 mt-0.5" id="displayed-email">adjmaster@gmail.com</p>
+                    <p class="text-xs font-mono text-slate-400 mt-0.5" id="displayed-email">jaiaditya.jsj@gmail.com</p>
                   </div>
                 </div>
                 <button onclick="copyEmailToClipboard()" class="p-2.5 rounded-lg bg-dark-800 text-slate-300 hover:text-white hover:bg-brand-600 transition" title="Copy to clipboard">
@@ -839,7 +813,6 @@
 
           </div>
 
-          <!-- Interactive Contact Form (Right) -->
           <div class="lg:col-span-7 glass-card p-6 sm:p-8 rounded-2xl">
             <h3 class="text-xl font-bold text-white mb-2">Send a Message</h3>
             <p class="text-xs text-slate-400 mb-6">Leave your details and query; I will respond promptly.</p>
@@ -872,7 +845,6 @@
               </button>
             </form>
 
-            <!-- Feedback Message Box -->
             <div id="form-feedback" class="hidden mt-4 p-4 rounded-xl text-xs font-mono"></div>
           </div>
 
@@ -899,17 +871,15 @@
     </div>
   </footer>
 
+  <!-- Project Modal -->
   <div id="project-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
     <div class="relative w-full max-w-2xl glass-card rounded-2xl border border-white/10 shadow-2xl p-6 sm:p-8 max-h-[90vh] overflow-y-auto">
       
-      <!-- Close Button -->
       <button onclick="closeProjectModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white p-2 rounded-lg bg-dark-800 transition">
         <i class="fa-solid fa-xmark text-lg"></i>
       </button>
 
-      <div id="modal-content">
-        <!-- Dynamically injected via JavaScript -->
-      </div>
+      <div id="modal-content"></div>
     </div>
   </div>
 
@@ -922,7 +892,6 @@
       mobileMenu.classList.toggle('hidden');
     });
 
-    // Close mobile menu on anchor click
     document.querySelectorAll('#mobile-menu a').forEach(link => {
       link.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
@@ -930,17 +899,17 @@
     });
 
     // Skill Filter Logic
-    function filterSkills(category) {
+    function filterSkills(category, clickedElement) {
       const tabs = document.querySelectorAll('.skill-tab');
       tabs.forEach(tab => {
-        if (tab.getAttribute('data-category') === category) {
-          tab.classList.add('text-white', 'bg-brand-600/30', 'border-brand-500');
-          tab.classList.remove('text-slate-400');
-        } else {
-          tab.classList.remove('text-white', 'bg-brand-600/30', 'border-brand-500');
-          tab.classList.add('text-slate-400');
-        }
+        tab.classList.remove('text-white', 'bg-brand-600/30', 'border-brand-500');
+        tab.classList.add('text-slate-400');
       });
+
+      if (clickedElement) {
+        clickedElement.classList.add('text-white', 'bg-brand-600/30', 'border-brand-500');
+        clickedElement.classList.remove('text-slate-400');
+      }
 
       const cards = document.querySelectorAll('.skill-card');
       cards.forEach(card => {
@@ -1037,7 +1006,6 @@
       document.getElementById('project-modal').classList.add('hidden');
     }
 
-    // Close modal on escape or background click
     window.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') closeProjectModal();
     });
@@ -1046,35 +1014,42 @@
       if (e.target.id === 'project-modal') closeProjectModal();
     });
 
-    // Copy Email logic using document.execCommand('copy') fallback compatibility
+    // Clipboard copy with fallback support
     function copyEmailToClipboard() {
       const email = "jaiaditya.jsj@gmail.com";
-      const tempInput = document.createElement("input");
-      tempInput.value = email;
-      document.body.appendChild(tempInput);
-      tempInput.select();
-      
-      try {
-        document.execCommand('copy');
-        const heroBtnText = document.getElementById('copy-btn-text');
-        if (heroBtnText) heroBtnText.textContent = "Copied to Clipboard!";
-        
-        const feedback = document.getElementById('form-feedback');
-        feedback.className = "mt-4 p-3 rounded-xl text-xs font-mono bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 block";
-        feedback.textContent = `Copied "${email}" to clipboard.`;
-        
-        setTimeout(() => {
-          if (heroBtnText) heroBtnText.textContent = "Copy Email";
-          feedback.className = "hidden";
-        }, 4000);
-      } catch (err) {
-        console.error("Could not copy text: ", err);
-      } finally {
-        document.body.removeChild(tempInput);
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(email).then(showCopiedFeedback);
+      } else {
+        const tempInput = document.createElement("input");
+        tempInput.value = email;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        try {
+          document.execCommand('copy');
+          showCopiedFeedback();
+        } catch (err) {
+          console.error("Could not copy text: ", err);
+        } finally {
+          document.body.removeChild(tempInput);
+        }
       }
     }
 
-    // Contact Form submission simulated handler
+    function showCopiedFeedback() {
+      const heroBtnText = document.getElementById('copy-btn-text');
+      if (heroBtnText) heroBtnText.textContent = "Copied to Clipboard!";
+      
+      const feedback = document.getElementById('form-feedback');
+      feedback.className = "mt-4 p-3 rounded-xl text-xs font-mono bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 block";
+      feedback.textContent = `Copied "jaiaditya.jsj@gmail.com" to clipboard.`;
+      
+      setTimeout(() => {
+        if (heroBtnText) heroBtnText.textContent = "Copy Email";
+        feedback.className = "hidden";
+      }, 4000);
+    }
+
+    // Contact Form submission handler
     function handleContactSubmit(event) {
       event.preventDefault();
       const submitBtn = document.getElementById('submit-btn');
